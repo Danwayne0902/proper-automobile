@@ -1,0 +1,1 @@
+../../Layouts/GuestLayout.vue

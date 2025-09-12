@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light Theme (Default) */
+body.theme-light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-tertiary: #9ca3af;
+  --border-color: #e5e7eb;
+  --accent-color: #4f46e5;
+  --accent-hover: #4338ca;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+}
+
+/* Dark Theme */
+body.theme-dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --border-color: #4b5563;
+  --accent-color: #818cf8;
+  --accent-hover: #6366f1;
+  --success-color: #34d399;
+  --warning-color: #fbbf24;
+  --error-color: #f87171;
+}
+
+/* Blue Theme */
+body.theme-blue {
+  --bg-primary: #eff6ff;
+  --bg-secondary: #dbeafe;
+  --bg-tertiary: #bfdbfe;
+  --text-primary: #1e3a8a;
+  --text-secondary: #2563eb;
+  --text-tertiary: #3b82f6;
+  --border-color: #93c5fd;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --success-color: #059669;
+  --warning-color: #d97706;
+  --error-color: #dc2626;
+}
+
+/* Base styles using CSS variables */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Background colors */
+.bg-primary {
+  background-color: var(--bg-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bg-secondary) !important;
+}
+
+.bg-tertiary {
+  background-color: var(--bg-tertiary) !important;
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--text-primary) !important;
+}
+
+.text-secondary {
+  color: var(--text-secondary) !important;
+}
+
+.text-tertiary {
+  color: var(--text-tertiary) !important;
+}
+
+/* Border colors */
+.border-primary {
+  border-color: var(--border-color) !important;
+}
+
+/* Accent colors */
+.bg-accent {
+  background-color: var(--accent-color) !important;
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--accent-hover) !important;
+}
+
+.text-accent {
+  color: var(--accent-color) !important;
+}
+
+.border-accent {
+  border-color: var(--accent-color) !important;
+}
+
+/* Status colors */
+.bg-success {
+  background-color: var(--success-color) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning-color) !important;
+}
+
+.bg-error {
+  background-color: var(--error-color) !important;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Focus styles */
+.focus\:ring-accent {
+  --tw-ring-color: var(--accent-color);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Form elements */
+input, textarea, select {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Navigation */
+.nav-link {
+  color: var(--text-secondary);
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+}
+
+.nav-link.active {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Ensure proper contrast for all elements */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+/* Tables */
+.table {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.table th {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.table td {
+  border-color: var(--border-color);
+}
+
+/* Alerts */
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+  border-color: var(--success-color);
+}
+
+.alert-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+  border-color: var(--warning-color);
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--error-color);
+  border-color: var(--error-color);
+}
+
+/* Links */
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
