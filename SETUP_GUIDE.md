@@ -358,6 +358,26 @@ npm install && npm run dev
 - 📄 PDF invoice generation
 - 📸 Image optimization and storage
 
+## Optional Features
+
+### Google Maps Integration
+To enable the interactive map on the landing page and other locations:
+
+1. Obtain a Google Maps API key from the [Google Cloud Console](https://console.cloud.google.com/)
+2. Enable the Maps Embed API in your Google Cloud project
+3. Add the API key to your `.env` file:
+   ```
+   VITE_GOOGLE_MAPS_API_KEY=your_api_key_here
+   ```
+4. Rebuild your frontend assets:
+   ```bash
+   npm run dev
+   ```
+
+Note: The current implementation will work without an API key using a static map as a fallback. However, for full interactive functionality, a Google Maps API key is recommended.
+
+The map component is implemented in `resources/js/Components/MapComponent.vue` and can be easily reused in other pages.
+
 ## Testing Strategy
 
 ### Unit Tests
