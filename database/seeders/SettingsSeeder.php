@@ -16,10 +16,10 @@ class SettingsSeeder extends Seeder
         // General settings
         Setting::set('app_name', 'Proper Automobile', 'general');
         Setting::set('app_description', 'Premier luxury car dealership platform', 'general');
-        Setting::set('contact_email', 'info@proper-automobile.com', 'general');
-        Setting::set('contact_phone', '+234 (703) 948-1762', 'general');
-        Setting::set('address', '123 Luxury Auto Lane, Premium City, PC 12345', 'general');
-        Setting::set('business_hours', 'Mon-Fri 9AM-7PM, Sat 9AM-5PM, Sun Closed', 'general');
+        Setting::set('contact_email', 'danwayne0902@gmail.com', 'general');
+        Setting::set('contact_phone', '+234 (705) 340-4846', 'general');
+        Setting::set('address', '123 Luxury Auto Drive, Premium District, Car City, CC 12345', 'general');
+        Setting::set('business_hours', 'Mon-Fri 9AM-8PM, Sat-Sun 10AM-6PM', 'general');
         Setting::set('timezone', 'UTC', 'general');
         Setting::set('currency', 'USD', 'general');
         Setting::set('max_images_per_automobile', 10, 'general', 'integer');

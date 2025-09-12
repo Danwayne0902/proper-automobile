@@ -77,13 +77,13 @@ class ContactController extends Controller
             $message = "Dear {$contactData['first_name']} {$contactData['last_name']},\n\n";
             $message .= "Thank you for reaching out to us regarding: " . ucfirst(str_replace('_', ' ', $contactData['subject'])) . "\n\n";
             $message .= "We have received your message and will respond within 24 hours. ";
-            $message .= "If you need immediate assistance, please call us at +1 (555) 123-4567.\n\n";
+            $message .= "If you need immediate assistance, please call us at +234 (705) 340-4846.\n\n";
             $message .= "Your message:\n";
             $message .= "\"" . $contactData['message'] . "\"\n\n";
             $message .= "Best regards,\n";
             $message .= "The Proper Automobile Team\n";
             $message .= "Email: info@properautomobile.com\n";
-            $message .= "Phone: +1 (555) 123-4567\n";
+            $message .= "Phone: +234 (705) 340-4846\n";
             $message .= "Website: " . config('app.url');
 
             // Send simple text email for customer confirmation

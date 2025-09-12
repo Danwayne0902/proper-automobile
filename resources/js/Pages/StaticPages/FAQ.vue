@@ -241,7 +241,7 @@
                         </div>
                       </button>
                       <div v-show="openFaqs['service-2']" class="p-4 pt-0 text-gray-600">
-                        You can reach our customer support team by phone at +1 (555) 123-4567, email us at info@properautomobile.com, or visit our showroom at 123 Auto Street, Car City. We're available Monday through Friday from 9 AM to 8 PM, and weekends from 10 AM to 6 PM.
+                        You can reach our customer support team by phone at +234 (705) 340-4846, email us at info@properautomobile.com, or visit our showroom at 123 Luxury Auto Drive, Premium District, Car City, CC 12345. We're available Monday through Friday from 9 AM to 8 PM, and weekends from 10 AM to 6 PM.
                       </div>
                     </div>
                   </div>
@@ -255,10 +255,22 @@
                   </p>
                   <Link
                     :href="route('contact')"
-                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors"
+                    class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-colors mb-6"
                   >
                     Contact Us
                   </Link>
+
+                  <!-- Map Section -->
+                  <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Visit Our Showroom</h3>
+                    <div class="h-48 rounded-lg overflow-hidden">
+                      <MapComponent
+                        address="123 Luxury Auto Drive, Premium District, Car City, CC 12345"
+                        title="Proper Automobile Location"
+                        height="100%"
+                        width="100%" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -272,13 +284,15 @@
 <script>
 import { Head, Link } from '@inertiajs/inertia-vue'
 import AppLayout from '@/Components/Layout/AppLayout.vue'
+import MapComponent from '@/Components/MapComponent.vue'
 
 export default {
   name: 'FAQPage',
   components: {
     Head,
     Link,
-    AppLayout
+    AppLayout,
+    MapComponent
   },
   data() {
     return {

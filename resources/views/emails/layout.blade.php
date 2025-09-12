@@ -168,9 +168,9 @@
         <div class="footer">
             <p>
                 <strong>Proper Automobile</strong><br>
-                123 Auto Street, Car City, CC 12345<br>
-                Phone: <a href="tel:+15551234567">+1 (555) 123-4567</a><br>
-                Email: <a href="mailto:info@properautomobile.com">info@properautomobile.com</a>
+                123 Luxury Auto Drive, Premium District, Car City, CC 12345<br>
+                Phone: <a href="tel:+2347053404846">+234 (705) 340-4846</a><br>
+                Email: <a href="mailto:danwayne0902@gmail.com">info@properautomobile.com</a>
             </p>
             <p style="margin-top: 15px; font-size: 12px;">
                 This email was sent from Proper Automobile. If you have any questions, please contact us at the information above.

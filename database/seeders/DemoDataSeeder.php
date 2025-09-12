@@ -21,8 +21,8 @@ class DemoDataSeeder extends Seeder
                 'name' => 'System Administrator',
                 'password' => Hash::make('password'),
                 'role' => 'admin',
-                'phone' => '+1 (555) 123-4567',
-                'address' => '123 Admin Street, Admin City, AC 12345',
+                'phone' => '+234 (705) 340-4846',
+                'address' => '123 Luxury Auto Drive, Premium District, Car City, CC 12345',
                 'email_verified_at' => now()
             ]
         );
