@@ -1,12 +1,14 @@
 <script>
 import { Head, Link } from '@inertiajs/inertia-vue';
 import { Inertia } from '@inertiajs/inertia';
+import MapComponent from '@/Components/MapComponent.vue';
 
 export default {
     name: 'Welcome',
     components: {
         Head,
-        Link
+        Link,
+        MapComponent
     },
     props: {
         canLogin: {
@@ -50,7 +52,7 @@ export default {
         },
         handleImageError(event) {
             // Fallback to a placeholder image if the car image fails to load
-            event.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlN2ViIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzZiNzI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNhciBJbWFnZTwvdGV4dD4KICA8cGF0aCBkPSJtMTAwIDEwMCA2MCAzMGMxMCAzIDIwIDMgMzAgMGw2MC0zMGMxMC0zIDEwLTcgMC0xMGwtNjAtMzBjLTEwLTMtMjAtMy0zMCAwbC02MCAzMGMtMTAgMyAtMTA3NyAwIDEweiIgZmlsbD0iIzliOWI5YiIvPgo8L3N2Zz4K'
+            event.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTVlN2ViIi8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzZiNzI4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNhciBJbWFnZTwvdGV4dD4KICA8cGF0aCBkPSJtMTAwIDEwMCA2MCAzMGMxMCAzIDIwIDMgMzAgMGw2MC0zMGMxMC0zIDEwLTcgMC0xMGwtNjAtMzBjLTEwLTMtMjAtMy0zMCAwbC02MCAzMGMtMTAgyIDEwNzcgMCB6IiBmaWxsD0iIzliOWI5YiIvPgo8L3N2Zz4K'
         },
         scrollToSection(sectionId) {
             const element = document.getElementById(sectionId);
@@ -446,15 +448,12 @@ export default {
             <!-- Map Placeholder -->
             <div class="mt-8">
               <h4 class="text-lg font-semibold text-gray-900 mb-4">Find Us</h4>
-              <div class="bg-gray-200 h-48 rounded-lg flex items-center justify-center">
-                <div class="text-center text-gray-500">
-                  <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  <p class="text-sm">Interactive Map</p>
-                  <p class="text-xs">Coming Soon</p>
-                </div>
+              <div class="h-48 rounded-lg overflow-hidden">
+                <MapComponent
+                  address="123 Luxury Auto Drive, Premium District, Car City, CC 12345"
+                  title="Proper Automobile Location"
+                  height="100%"
+                  width="100%" />
               </div>
             </div>
           </div>

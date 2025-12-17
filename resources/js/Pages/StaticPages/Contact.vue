@@ -187,9 +187,9 @@
                                                     <h3 class="text-lg font-semibold text-gray-900">Visit Our Showroom
                                                     </h3>
                                                     <p class="text-gray-600 mt-1">
-                                                        123 Auto Street<br />
-                                                        Car City, CC 12345<br />
-                                                        United States
+                                                        123 Luxury Auto Drive<br />
+                                                        Premium District<br />
+                                                        Car City, CC 12345
                                                     </p>
                                                 </div>
                                             </div>
@@ -230,15 +230,11 @@
                                                     <p class="text-gray-600 mt-1">
                                                         <a href="mailto:danwayne0902@gmail.com"
                                                             class="hover:text-blue-600">
-                                                            sales@properautomobile.com
+                                                            info@properautomobile.com
                                                         </a><br />
                                                         <a href="mailto:danwayne0902@yahoo.com"
                                                             class="hover:text-blue-600">
-                                                            service@properautomobile.com
-                                                        </a><br />
-                                                        <a href="mailto:chrisdoublejoy@gmail.com"
-                                                            class="hover:text-blue-600">
-                                                            info@properautomobile.com
+                                                            sales@properautomobile.com
                                                         </a>
                                                     </p>
                                                 </div>
@@ -263,6 +259,18 @@
                                                 </button>
                                             </div>
                                         </div>
+
+                                        <!-- Map Section -->
+                                        <div class="mt-12">
+                                            <h3 class="text-lg font-semibold text-gray-900 mb-4">Find Us</h3>
+                                            <div class="h-64 rounded-lg overflow-hidden">
+                                                <MapComponent
+                                                  address="123 Luxury Auto Drive, Premium District, Car City, CC 12345"
+                                                  title="Proper Automobile Location"
+                                                  height="100%"
+                                                  width="100%" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -278,13 +286,15 @@
 import { Head, Link } from '@inertiajs/inertia-vue'
 import { Inertia } from '@inertiajs/inertia'
 import AppLayout from '@/Components/Layout/AppLayout.vue'
+import MapComponent from '@/Components/MapComponent.vue'
 
 export default {
   name: 'ContactPage',
   components: {
     Head,
     Link,
-    AppLayout
+    AppLayout,
+    MapComponent
   },
   data() {
     return {
